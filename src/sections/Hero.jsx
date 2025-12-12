@@ -9,7 +9,7 @@ const Hero = () => {
 Driven by clean design and thoughtful engineering
 Crafted with intent.`;
   return (
-    <section id="home" className="flex flex-col justify-end min-h-screen">
+    <section id="home" className="flex flex-col justify-center md:justify-end min-h-screen">
       <AnimatedHeaderSection
         subTitle={"Welcome to my portfolio"}
         title={"Syed Noor"}

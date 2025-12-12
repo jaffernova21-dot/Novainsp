@@ -1,6 +1,6 @@
-
 import Marquee from "react-fast-marquee";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import QuoteBox from "../components/QuoteBox";
 
 const ContactSummary = () => {
   const icon = "mdi:star-four-points";
@@ -13,27 +13,31 @@ const ContactSummary = () => {
   ];
 
   return (
-    <section
-      className="flex flex-col items-center justify-between min-h-screen gap-12 mt-16"
-    >
-      <Marquee speed={80} className="overflow-hidden w-full h-20 md:h-[100px] flex items-center marquee-text-responsive font-light uppercase whitespace-nowrap text-white bg-black">
+    <section className="flex flex-col items-center justify-between gap-12 mt-16">
+      <Marquee
+        speed={80}
+        className="overflow-hidden w-full h-20 md:h-[100px] flex items-center marquee-text-responsive font-light uppercase whitespace-nowrap text-white bg-black"
+      >
         {items.map((item, index) => (
-          <span key={index} className="flex items-center px-5 md:px-10 gap-x-10 md:gap-x-20 lg:px-16 lg:gap-x-32">
+          <span
+            key={index}
+            className="flex items-center px-5 md:px-10 gap-x-10 md:gap-x-20 lg:px-16 lg:gap-x-32"
+          >
             {item} <Icon icon={icon} />
           </span>
         ))}
       </Marquee>
-      <div className="overflow-hidden font-light text-center contact-text-responsive">
-        <p>
-          “ Let’s build a <br />
-          <span className="font-normal">memorable</span> &{" "}
-          <span className="italic">inspiring</span> <br />
-          web application <span className="text-gold">together</span> “
-        </p>
-      </div>
-      <Marquee speed={80} direction="right" className="overflow-hidden w-full h-20 md:h-[100px] flex items-center marquee-text-responsive font-light uppercase whitespace-nowrap text-black bg-white">
+      <QuoteBox />
+      <Marquee
+        speed={80}
+        direction="right"
+        className="overflow-hidden w-full h-20 md:h-[100px] flex items-center marquee-text-responsive font-light uppercase whitespace-nowrap text-black bg-white"
+      >
         {items.map((item, index) => (
-          <span key={index} className="flex items-center px-5 md:px-10 gap-x-10 md:gap-x-20 lg:px-16 lg:gap-x-32">
+          <span
+            key={index}
+            className="flex items-center px-5 md:px-10 gap-x-10 md:gap-x-20 lg:px-16 lg:gap-x-32"
+          >
             {item} <Icon icon={icon} />
           </span>
         ))}
