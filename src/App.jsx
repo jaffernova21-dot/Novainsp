@@ -10,6 +10,7 @@ import ContactSummary from "./sections/ContactSummary";
 import Contact from "./sections/Contact";
 import { useProgress } from "@react-three/drei";
 import ClientsLogo from "./sections/ClientsLogo";
+import Testimonials from "./sections/Testimonials";
 
 const App = () => {
   const { progress } = useProgress();
@@ -49,6 +50,7 @@ const App = () => {
         <Works />
         <ClientsLogo />
         <ContactSummary />
+        <Testimonials />
         <Contact />
       </div>
     </ReactLenis>

@@ -12,6 +12,8 @@ const ContactSummary = () => {
     "Excellence",
   ];
 
+  const items2 = ["Foundation", "Scalability", "Evolve", "Deployment", "Architecture"];
+
   return (
     <section className="flex flex-col items-center justify-between gap-12 mt-16">
       <Marquee
@@ -21,7 +23,7 @@ const ContactSummary = () => {
         {items.map((item, index) => (
           <span
             key={index}
-            className="flex items-center px-5 md:px-10 gap-x-10 md:gap-x-20 lg:px-16 lg:gap-x-32"
+            className="flex items-center px-3 md:px-4 gap-x-6 md:gap-x-8 lg:px-5 lg:gap-x-10"
           >
             {item} <Icon icon={icon} />
           </span>
@@ -33,10 +35,10 @@ const ContactSummary = () => {
         direction="right"
         className="overflow-hidden w-full h-20 md:h-[100px] flex items-center marquee-text-responsive font-light uppercase whitespace-nowrap text-black bg-white"
       >
-        {items.map((item, index) => (
+        {items2.map((item, index) => (
           <span
             key={index}
-            className="flex items-center px-5 md:px-10 gap-x-10 md:gap-x-20 lg:px-16 lg:gap-x-32"
+            className="flex items-center px-3 md:px-4 gap-x-6 md:gap-x-8 lg:px-5 lg:gap-x-10"
           >
             {item} <Icon icon={icon} />
           </span>

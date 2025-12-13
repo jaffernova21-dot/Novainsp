@@ -2,18 +2,18 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import projotnoTea from "../../public/assets/clients/projotno_tea.jpg";
-import axisway from "../../public/assets/clients/axisway.jpg";
-import pulseFitness from "../../public/assets/clients/pulse_fitness.jpg";
-import playwearBD from "../../public/assets/clients/playwearBD.jpg";
-import interaid from "../../public/assets/clients/interaid.jpg";
-import puppetbrush from "../../public/assets/clients/puppetbrush.jpg";
-import qahaf from "../../public/assets/clients/qahaf.jpg";
-import retrofino from "../../public/assets/clients/retrofino.jpg";
-import sikder_foundation from "../../public/assets/clients/sikder_foundation.jpg";
-import treatosBD from "../../public/assets/clients/treatosBD.jpg";
-import posterOne from "../../public/assets/posters/poster-1.jpg";
-import posterTwo from "../../public/assets/posters/poster-2.jpg";
+import projotnoTea from "/assets/clients/projotno_tea.jpg";
+import axisway from "/assets/clients/axisway.jpg";
+import pulseFitness from "/assets/clients/pulse_fitness.jpg";
+import playwearBD from "/assets/clients/playwearBD.jpg";
+import interaid from "/assets/clients/interaid.jpg";
+import puppetbrush from "/assets/clients/puppetbrush.jpg";
+import qahaf from "/assets/clients/qahaf.jpg";
+import retrofino from "/assets/clients/retrofino.jpg";
+import sikder_foundation from "/assets/clients/sikder_foundation.jpg";
+import treatosBD from "/assets/clients/treatosBD.jpg";
+import posterOne from "/assets/posters/poster-1.jpg";
+import posterTwo from "/assets/posters/poster-2.jpg";
 import AnimatedHeaderSection from "../components/AnimatedHeaderSection";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -31,7 +31,7 @@ const PLACEHOLDER_LOGOS = [
   pulseFitness,
 ];
 
-const LogoCell = ({ logo, borderClasses = ""}) => {
+const LogoCell = ({ logo, borderClasses = "" }) => {
   return (
     <div
       className={`w-full aspect-square flex justify-center items-center relative ${borderClasses} overflow-hidden`}
@@ -93,11 +93,7 @@ export default function ClientsLogo() {
                 logo={PLACEHOLDER_LOGOS[0]}
                 borderClasses="border-r border-b"
               />
-              <LogoCell
-                logo={PLACEHOLDER_LOGOS[1]}
-                borderClasses="border-b"
-                
-              />
+              <LogoCell logo={PLACEHOLDER_LOGOS[1]} borderClasses="border-b" />
               <div className="col-span-2 aspect-square flex justify-center items-center pr-8 pt-8">
                 <img
                   src={posterOne}
@@ -116,14 +112,8 @@ export default function ClientsLogo() {
                 logo={PLACEHOLDER_LOGOS[4]}
                 borderClasses="border-r border-b"
               />
-              <LogoCell
-                logo={PLACEHOLDER_LOGOS[5]}
-                borderClasses="border-b"
-              />
-              <LogoCell
-                logo={PLACEHOLDER_LOGOS[6]}
-                borderClasses="border-r"
-              />
+              <LogoCell logo={PLACEHOLDER_LOGOS[5]} borderClasses="border-b" />
+              <LogoCell logo={PLACEHOLDER_LOGOS[6]} borderClasses="border-r" />
               <LogoCell logo={PLACEHOLDER_LOGOS[7]} height="h-6.5" />
             </div>
             <div className="grid grid-cols-2">
@@ -134,34 +124,64 @@ export default function ClientsLogo() {
                   className="w-full h-full"
                 />
               </div>
-              <LogoCell
-                logo={PLACEHOLDER_LOGOS[8]}
-                borderClasses="border-r"
-              />
+              <LogoCell logo={PLACEHOLDER_LOGOS[8]} borderClasses="border-r" />
 
               <LogoCell logo={PLACEHOLDER_LOGOS[9]} />
             </div>
           </div>
         </div>
 
-        {/* Bento Grid - Mobile*/}
+        {/* Bento Grid - Tablet*/}
         <div className="mt-10 px-4 md:px-10">
-          <div className="lg:hidden grid grid-cols-3">
-            <LogoCell logo={PLACEHOLDER_LOGOS[0]} borderClasses="border-r" />
+          <div className="hidden md:grid lg:hidden grid-cols-3">
+            <LogoCell
+              logo={PLACEHOLDER_LOGOS[0]}
+              borderClasses="border-r border-b"
+            />
             <LogoCell
               logo={PLACEHOLDER_LOGOS[1]}
-              borderClasses="border-r"
+              borderClasses="border-r border-b"
             />
+            <LogoCell logo={PLACEHOLDER_LOGOS[2]} borderClasses="border-b" />
+
+            <div className="col-span-2 aspect-square flex justify-center items-center pr-8 py-8 border-b border-r">
+              <img src={posterOne} alt="poster one" className="w-full h-full" />
+            </div>
+            <div className="grid grid-cols-1">
+              <LogoCell logo={PLACEHOLDER_LOGOS[3]} borderClasses="border-b" />
+              <LogoCell logo={PLACEHOLDER_LOGOS[4]} borderClasses="border-b" />
+            </div>
+            <LogoCell
+              logo={PLACEHOLDER_LOGOS[5]}
+              borderClasses="border-r border-b"
+            />
+            <LogoCell
+              logo={PLACEHOLDER_LOGOS[6]}
+              borderClasses="border-r border-b"
+            />
+            <LogoCell logo={PLACEHOLDER_LOGOS[7]} borderClasses="border-b" />
+            <div className="grid grid-cols-1">
+              <LogoCell logo={PLACEHOLDER_LOGOS[8]} borderClasses="border-b" />
+              <LogoCell logo={PLACEHOLDER_LOGOS[9]} />
+            </div>
+            <div className="col-span-2 aspect-square flex justify-center items-center pl-8 pt-8 border-l">
+              <img src={posterTwo} alt="poster two" className="w-full h-full" />
+            </div>
+          </div>
+        </div>
+
+        {/* Bento Grid - Mobile*/}
+        <div className="mt-10 px-4 md:px-10">
+          <div className="md:hidden grid grid-cols-3">
+            <LogoCell logo={PLACEHOLDER_LOGOS[0]} borderClasses="border-r" />
+            <LogoCell logo={PLACEHOLDER_LOGOS[1]} borderClasses="border-r" />
             <LogoCell logo={PLACEHOLDER_LOGOS[2]} />
 
             <div className="col-span-3 aspect-square flex justify-center items-center p-5 border-y">
               <img src={posterOne} alt="poster one" className="w-full h-full" />
             </div>
             <LogoCell logo={PLACEHOLDER_LOGOS[3]} borderClasses="border-r" />
-            <LogoCell
-              logo={PLACEHOLDER_LOGOS[4]}
-              borderClasses="border-r"
-            />
+            <LogoCell logo={PLACEHOLDER_LOGOS[4]} borderClasses="border-r" />
             <LogoCell logo={PLACEHOLDER_LOGOS[5]} height="h-8" />
             <LogoCell
               logo={PLACEHOLDER_LOGOS[6]}
@@ -171,10 +191,7 @@ export default function ClientsLogo() {
               logo={PLACEHOLDER_LOGOS[7]}
               borderClasses="border-t border-r"
             />
-            <LogoCell
-              logo={PLACEHOLDER_LOGOS[8]}
-              borderClasses="border-t"
-            />
+            <LogoCell logo={PLACEHOLDER_LOGOS[8]} borderClasses="border-t" />
           </div>
         </div>
       </div>
