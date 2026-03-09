@@ -12,7 +12,7 @@ Crafted with intent.`;
     <section id="home" className="flex flex-col justify-center md:justify-end min-h-screen">
       <AnimatedHeaderSection
         subTitle={"Welcome to my portfolio"}
-        title={"Syed Noor"}
+        title={"Jaffer Nova"}
         text={text}
         textColor={"text-black"}
       />
