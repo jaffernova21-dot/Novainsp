@@ -178,11 +178,11 @@ export const projects = [
   },
 ];
 export const socials = [
-  { name: "Instagram", href: "https://www.instagram.com/shaed_noor/" },
+  { name: "Instagram", href: "https://www.instagram.com/nova_jfrrr/" },
   {
     name: "Facebook",
-    href: "https://www.facebook.com/shaed.noor/",
+    href: "https://www.facebook.com/{}/",
   },
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/shaednoor/" },
-  { name: "GitHub", href: "https://github.com/syednoor058" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/{}/" },
+  { name: "GitHub", href: "https://github.com/jaffernova21-dot" },
 ];
