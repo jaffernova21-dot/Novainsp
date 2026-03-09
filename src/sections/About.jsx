@@ -49,8 +49,8 @@ const About = () => {
       <div className="flex flex-col items-center justify-between gap-16 px-4 md:px-10 pb-16 text-xl font-light tracking-wide lg:flex-row-reverse md:text-2xl lg:text-3xl text-white/60">
         <img
           ref={imgRef}
-          src="images/"
-          alt="shaed noor photo"
+          src="public/images/IMG_20251113_175429.png"
+          alt="Jaffer Nova photo"
           className="rounded-xl w-full lg:w-2/5"
         />
         <AnimatedTextLines text={aboutText} className={"w-full text-lg"} lineGap="pb-5 last:pb-0"/>
